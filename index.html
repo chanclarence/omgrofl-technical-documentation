@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Omgrofl Technical Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <header>
+                <h1><a href="index.html">Omgrofl Documentation</a></h1>
+            </header>
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Syntax" class="nav-link">Syntax</a>
+            <a href="#Variables" class="nav-link">Variables</a>
+            <a href="#Statements" class="nav-link">Statements</a>
+            <a href="#Computational_Class" class="nav-link">Computational Class</a>
+            <a href="#Examples" class="nav-link">Examples</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h2>Introduction</h2>
+                </header>
+                <article>
+                    <p>Omgrofl is an <a href="http://esolangs.org/wiki/Esoteric_programming_language" target="_blank">esoteric programming language</a> created in 2006 by <a href="http://esolangs.org/wiki/Juraj_Borza" target="_blank">Juraj Borza</a>. It is equipped with a stack/queue,
+                        has support for byte-sized variables and keywords resembling Internet slang. The name comes from
+                        combining the slang "words" omg and rofl.
+                        <code>Rofl</code> is actually one of Omgrofl's commands.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Syntax">
+                <header>
+                    <h2>Syntax</h2>
+                </header>
+                <article>
+                    <ul>
+                        <li>Omgrofl programs consist of statements, that are written on separate lines.</li>
+                        <li>Each command denotes a type of statement.</li>
+                        <li>Some statements may also contain conditions or expressions. </li>
+                        <li>An expression is a variable or a number.</li>
+                        <li>Indentation is optional, it may improve code readability. </li>
+                        <li>If there are two statements on one line, the second is ignored. </li>
+                        <li>Empty lines are ignored.</li>
+                        <li>Omgrofl is not case-sensitive, thus
+                            <code>lol</code> is the same as
+                            <code>LoL</code>. You may use this to produce nicer code.</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Variables">
+                <header>
+                    <h2>Variables</h2>
+                </header>
+                <article>
+                    <p>The programmer may use variables in Omgrofl. These must be a form of the slang word lol, like 
+                        <code>lol</code>,
+                        <code>lool</code>,
+                        <code>loool</code>, <code>looool</code>, etc. A variable can be defined as:</p>
+                    <code class="code-chunk">
+                        lol iz 4
+                    </code>
+                    <p>This statement creates a new variable named
+                        <code>lol</code>, assigning the value 4 to it.</p>
+
+                </article>
+            </section>
+            <section class="main-section" id="Statements">
+                <header>
+                    <h2>Statements</h2>
+                </header>
+                <article>
+                    <section class="sub-section" id="Conditionals">
+                        <h3>Conditionals</h3>
+                        <p>
+                            <code>wtf</code> condition – is a conditional statement (like
+                            <code>if</code> in C).</p>
+                        <p>The statements until the matching brb are executed only if the condition is true.</p>
+                        <p>Usage:</p>
+                        <code class="code-chunk">
+                            lol iz 1<br>
+                            wtf lol iz liek 1<br>
+                            rofl lol<br>
+                            lmao lol<br>
+                            brb
+                        </code>
+                        <p>Possible conditions are:</p>
+                        <p>
+                            <code>iz uber</code> – checks if one expression is greater than another.</p>
+                        <p>Usage:</p>
+                        <code class="code-chunk">x iz uber y</code>
+                        <p>
+                            <code>iz liek</code> - checks if two expressions are equal.</p>
+                        <p>These may be modified by:</p>
+                        <p>
+                            <code>nope</code> – negation (like
+                            <code>!</code> in C) - needs to be placed in front of
+                            <code>liek</code> or
+                            <code>uber.</code>
+                        </p>
+                        <p>Usage:</p>
+                        <code class="code-chunk">
+                            x iz nope uber y<br>
+                            lol iz nope liek 7
+                        </code>
+                    </section>
+                    <section class="sub-section" id="Loops">
+                        <h3>Loops</h3>
+                        <p>
+                            <code>rtfm</code> – begins a loop.</p>
+                        <p>The statements between
+                            <code>rtfm</code> and the matching
+                            <code>brb</code> are repeated indefinitely. Thus, a loop must be broken with
+                            <code>tldr</code>.</p>
+                        <p>Example:</p>
+                        <code class="code-chunk">
+                            rtfm<br>
+                            &nbsp;lol iz 64<br>
+                            brb
+                        </code>
+                        <p>
+                            <code>4 variable iz initial-value 2 end-value</code> - begins a "for" loop.</p>
+                        <p>The variable is set to the initial-value, and then the statements between the
+                            <code>4</code> statement and the matching
+                            <code>brb</code> are repeated until the variable reaches the end-value. The initial-value and end-value are evaluated
+                            only once.</p>
+                        <p>Usage:</p>
+                        <code class="code-chunk">
+                            4 variable iz initial-value 2 end-value<br>
+                            &nbsp;w00t some code<br>
+                            brb                           
+                        </code>
+                        <p>If the initial-value is lower than end-value the variable is increased by 1 after each iteration.
+                            If the initial-value is greater than end-value the variable is decreased by 1 after each iteration.
+                            If the initial-value equals the end-value the body of the loop executes exactly once. The variable
+                            may be modified inside the loop.</p>
+                        <p>
+                            <code>tldr</code> – breaks a loop – like
+                            <code>break</code> in C. May only be placed between
+                            <code>rtfm</code> and
+                            <code>brb</code> or between a
+                            <code>4</code> statement and
+                            <code>brb</code>.</p>
+                    </section>
+                    <section class="sub-section" id="I/O">
+                        <h3>I/O</h3>
+                        <p>
+                            <code>stfw</code> x – reads a value into x. A byte character is read from standard input, and its value is stored
+                            into x, like in
+                            <a href="http://esolangs.org/wiki/Brainfuck" target="_blank">brainfuck</a>.</p>
+                        <p>
+                            <code>rofl</code> x – prints out the value of x as a byte character. Also like in brainfuck.</p>
+                    </section>
+                    <section class="sub-section" id="Stack/Queue">
+                        <h3>Stack/Queue</h3>
+                        <p>The stack/queue is one data structure that acts as a stack and a queue simultaneously, aka. an input-restricted
+                            (as there is no way to push to the back of the queue) <a href="http://esolangs.org/wiki/Deque" target="_blank">deque</a>.</p>
+                        <p>
+                            <code>n00b</code> x – pushes x onto the stack / enqueues x.</p>
+                        <p>
+                            <code>l33t</code> x – pops a value from the stack and stores it into x. If the stack/queue is empty, 0 is stored
+                            into x.</p>
+                        <p>
+                            <code>haxor</code> x - dequeues a value. If the stack/queue is empty, 0 is stored into x.</p>
+                    </section>
+                    <section class="sub-section" id="Misc">
+                        <h3>Misc</h3>
+                        <p>
+                            <code>stfu</code> – exits application immediately. It is unnecessary at the end of the program, use it only when
+                            you want to terminate the execution of the program in another place (like
+                            <code>exit</code> in C.)</p>
+                        <p>
+                            <code>brb</code> – serves as
+                            <code>end</code> in Pascal,
+                            <code>}</code> in C. See
+                            <code>wtf</code> or
+                            <code>rtfm</code>.</p>
+                        <p>
+                            <code>afk</code> x – pauses the program execution for x milliseconds.</p>
+                        <p>Usage:</p>
+                        <code class="code-chunk">
+                            loool iz 255<br>
+                            afk loool
+                        </code>
+                        <p>pauses the execution for 255 milliseconds.</p>
+                        <p>variable
+                            <code>iz</code> x – is assignment – like
+                            <code>=</code> in C.</p>
+                        <p>
+                            <code>w00t</code> – starts a comment, characters after w00t until the end of the line are treated as a comment
+                            (like
+                            <code>//</code> in C).
+                        </p>
+                    </section>
+                    <section class="sub-section" id="Variable_Manipulation">
+                        <h3>Variable Manipulation</h3>
+                        <p><code>lmao</code> x – increments x by one.</p>
+                        <p><code>roflmao</code> x – decrements value of x by one.</p>
+                        <p>x <code>to /dev/null</code> – clears x.</p>
+                        <code class="code-chunk">
+                            lol to /dev/null<br>
+                            lol iz 0
+                        </code>
+                        <p>do the same thing.</p>
+                    </section>
+                </article>
+            </section>
+            <section class="main-section" id="Computational_Class">
+                <header>
+                    <h2>Computational Class</h3>
+                </header>
+                <article>
+                    <p>Because Omgrofl has a
+                        <a href="http://esolangs.org/wiki/Queue" target="_blank">queue</a> (which can act like a
+                        <a href="http://esolangs.org/wiki/Turing_machine" target="_blank">Turing machine</a>'s
+                        <a href="http://esolangs.org/wiki/Tape" target="_blank">tape</a>), it is 
+                        <a href="http://esolangs.org/wiki/Turing-complete" target="_blank">Turing-complete</a>.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Examples">
+                <header>
+                    <h2>Examples</h2>
+                </header>
+                <section class="sub-section" id="Hello,_World!">
+                    <h3>Hello, World!</h3>
+                    <code class="code-chunk">
+                        w00t a Hello, World! program by poiuy_qwert<br>
+                        lol iz 72<br>
+                        rofl lol<br>
+                        lol iz 101<br>
+                        rofl lol<br>
+                        lol iz 108<br>
+                        rofl lol<br>
+                        rofl lol<br>
+                        lool iz 111<br>
+                        rofl lool<br>
+                        loool iz 44<br>
+                        rofl loool<br>
+                        loool iz 32<br>
+                        rofl loool<br>
+                        loool iz 87<br>
+                        rofl loool<br>
+                        rofl lool<br>
+                        lool iz 114<br>
+                        rofl lool<br>
+                        rofl lol<br>
+                        lol iz 100<br>
+                        rofl lol<br>
+                        lol iz 33<br>
+                        rofl lol<br>
+                        stfu
+                    </code>
+                </section>
+                <section class="sub-section" id="Addition_of_two_numbers">
+                    <h3>Addition of two numbers</h3>
+                    <ul>
+                    <li>Only a code snippet:</li>
+                    <li><code>lol</code> is the first number (addend).</li>
+                    <li><code>lool</code> is the second number (addend).</li>
+                    <li>We want to add these two numbers together and store the result in <code>loool</code> without losing the values of <code>lol</code> and <code>lool</code>.</li>
+                    </ul>
+                    <code class="code-chunk">
+                        loool iz lol<br>
+                        looooool iz lool<br>
+                        rtfm<br>
+                        &nbsp;wtf looooool iz liek 0<br>
+                        &nbsp; tldr<br>
+                        &nbsp;brb<br>
+                        &nbsp;lmao loool<br>
+                        &nbsp;roflmao looooool<br>
+                        brb
+                    </code>
+                    <p>The same code in C:</p>
+                    <code class="code-chunk">
+                        uint8_t loool = lol;<br>
+                        uint8_t looooool = lool;<br>
+                        while (true)<br>
+                        {<br>
+                        &nbsp;if (looooool == 0)<br>
+                        &nbsp; break;<br>
+                        &nbsp;loool++;<br>
+                        &nbsp;looooool--;<br>
+                        }
+                    </code>
+                    <br><br>
+                </section>
+            </section>
+        </main>
+        <footer id="footer">
+            <p>&copy Coded by Clarence Chan, 2018. Omgrofl technical documentation derived from <a href="http://esolangs.org/wiki/Omgrofl" target="_blank">esolangs.org/wiki/Omgrofl</a>.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
